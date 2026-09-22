@@ -1,14 +1,6 @@
 # Nomos
 
-**A formal model of how legal orders allocate loss — and a machine-checked
-pipeline that reads new law into it by analogy to law already read.**
-
-Nomos is a Lean 4 library, a 60,595-provision corpus of legal texts, and a
-Python pipeline that turns provisions into formal rulings and hands them to a
-proof assistant for checking. The proof assistant does not merely check that
-the output is well-typed. It checks that the ruling is *legally well-formed* —
-that the facts a decision is said to rest on actually favour the party who won
-— and that it does not contradict the rulings already formalised around it.
+**A formal model of the basic "gestures" of legal reasoning with liability taken as primitive.**
 ---
 
 ## Contents
