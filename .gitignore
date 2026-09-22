@@ -1,0 +1,132 @@
+# ---------------------------------------------------------------------------
+# Lean dependencies
+# ---------------------------------------------------------------------------
+# 
+lean/.lake/
+lean/build/
+*.olean
+*.ilean
+*.hash
+*.trace
+
+# ---------------------------------------------------------------------------
+# Python dependencies
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+
+# environments
+.venv/
+venv/
+env/
+ENV/
+
+# tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+# The pipeline reads ANTHROPIC_API_KEY / OPENAI_API_KEY from the environment.
+# Never let a local .env carrying one get committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# ---------------------------------------------------------------------------
+# Generated data
+# ---------------------------------------------------------------------------
+# The built corpus. 13 MB gzipped, 67 MB raw, and fully reproducible from
+# data/raw/ with `make corpus` in about seven seconds. Derived data does not
+# belong in git when the inputs and the builder are both already there.
+data/corpus/provisions.jsonl
+data/corpus/provisions.jsonl.gz
+data/corpus/provisions_permissive.jsonl
+data/corpus/provisions_permissive.jsonl.gz
+data/corpus/stats.json
+
+# data/corpus/fact_patterns.json and data/seed/formalizations.jsonl are also
+# generated -- by `make seed`, out of src/nomos/fact_patterns.py and the Lean
+# corpus modules -- but they are small (10 KB and 83 KB) and they are the part
+# of the data a reader actually wants to browse without installing a Lean
+# toolchain first. They stay tracked on purpose. If you would rather they did
+# not, uncomment:
+#
+# data/corpus/fact_patterns.json
+# data/seed/formalizations.jsonl
+
+# Fetched by `python -m nomos.fetch.restricted` on a machine with ordinary
+# network access. Third-party text under assorted licences; keep it local.
+data/raw/restricted/
+
+# Pipeline and training outputs.
+data/runs/
+data/train/
+checkpoints/
+*.safetensors
+*.bin
+*.gguf
+wandb/
+runs/
+
+# ---------------------------------------------------------------------------
+# data/raw/ is TRACKED on purpose
+# ---------------------------------------------------------------------------
+# ~62 MB of staged source texts (Latin Library, Sefaria, Daizhige). It is
+# third-party and it is fetchable, so tracking it is a real choice: it makes
+# the build hermetic and keeps the licence files next to the texts they cover,
+# which for a project whose whole point is provenance is worth the megabytes.
+#
+# To go the other way -- lean repo, fetch on demand -- uncomment the block
+# below and restore the sources with the git commands in DATA_LICENSES.md.
+#
+# data/raw/latin_library/
+# data/raw/sefaria/
+# data/raw/sinica/
+
+# ---------------------------------------------------------------------------
+# Notebooks
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Notebook OUTPUTS are committed on purpose. They are the fastest way to see
+# what the corpus and the pipeline actually produce without running anything,
+# and `make run-notebooks` regenerates them deterministically. If that churns
+# your diffs, install nbstripout instead of ignoring the files.
+
+# ---------------------------------------------------------------------------
+# Editors and OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Archives and scratch
+# ---------------------------------------------------------------------------
+nomos.zip
+*.tar.gz
+/scratch/
+/tmp/

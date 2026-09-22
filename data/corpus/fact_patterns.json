@@ -1,0 +1,323 @@
+[
+  {
+    "id": "FP-GRAZE",
+    "name": "Grazing trespass",
+    "scenario": "An animal in A's charge enters B's land and consumes or destroys standing crops.  A did not have B's leave.",
+    "issue": "Does A answer to B, and in what?",
+    "factors": [
+      "harmOccurred",
+      "respondentsInstrument",
+      "withoutLeave",
+      "respondentBenefited",
+      "inPublicOrClaimantsGround",
+      "claimantConsented",
+      "properPrecaution"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LH §57-58"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 22:4"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 1:1 (shen), 2:2, 6:1"
+      },
+      {
+        "tradition": "roman",
+        "cite": "D.19.5.14.3; actio de pastu pecoris"
+      },
+      {
+        "tradition": "chinese",
+        "cite": "唐律疏議 arts. 204, 209"
+      }
+    ],
+    "notes": "The user's own example, and the best one: it is mundane enough that every agrarian order had to settle it, and specific enough that the settlements are comparable."
+  },
+  {
+    "id": "FP-GORE",
+    "name": "Goring animal",
+    "scenario": "An animal in A's charge kills or injures B, or an animal of B's.  The animal may or may not have been known to be dangerous, and A may or may not have been warned.",
+    "issue": "Does A answer, and does prior notice of the vice change the answer?",
+    "factors": [
+      "harmOccurred",
+      "respondentsInstrument",
+      "knownVice",
+      "warned",
+      "noPrecaution",
+      "harmToPerson",
+      "behavedAnomalously",
+      "properPrecaution",
+      "claimantAtFault"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LE §53-55; LH §250-252"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 21:28-36"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 1:4, 2:4, 4:9"
+      },
+      {
+        "tradition": "roman",
+        "cite": "XII Tab.; D.9.1 (actio de pauperie)"
+      },
+      {
+        "tradition": "chinese",
+        "cite": "唐律疏議 arts. 206, 207"
+      },
+      {
+        "tradition": "english",
+        "cite": "Alfred Af El. ~21; May v Burdett (1846); Animals Act 1971 s.2(2)"
+      }
+    ],
+    "notes": "Five orders, one pivot: prior notice.  Formalised and proved in Nomos/Bench/GoringOx.lean."
+  },
+  {
+    "id": "FP-PIT",
+    "name": "Hazard left in place",
+    "scenario": "A digs, opens or leaves a hazard where others or their animals pass.  B or B's animal comes to harm in it.",
+    "issue": "Does A answer for a static hazard he created but did not direct?",
+    "factors": [
+      "harmOccurred",
+      "respondentActedDirectly",
+      "noPrecaution",
+      "inPublicOrClaimantsGround",
+      "claimantAtFault",
+      "noticeGiven"
+    ],
+    "witnesses": [
+      {
+        "tradition": "covenant",
+        "cite": "Ex 21:33-34"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 1:1 (bor), 3:1, 5:5"
+      },
+      {
+        "tradition": "roman",
+        "cite": "D.9.2.28; D.9.3 (de effusis)"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "FP-FIRE",
+    "name": "Spreading fire",
+    "scenario": "A kindles a fire on his own ground; it spreads to B's.",
+    "issue": "Does A answer for the spread, and does precaution excuse him?",
+    "factors": [
+      "harmOccurred",
+      "respondentActedDirectly",
+      "noPrecaution",
+      "properPrecaution",
+      "irresistibleForce",
+      "customaryPractice"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LH §25 (theft at a fire)"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 22:5"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 1:1 (esh), 6:4-6"
+      },
+      {
+        "tradition": "roman",
+        "cite": "D.9.2.30.3; XII Tab. 8.10"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "FP-BAILMENT",
+    "name": "Deposit, hire and loan",
+    "scenario": "A holds B's thing -- as a favour, for a fee, or on loan for A's own use -- and it is lost, stolen, damaged or destroyed.",
+    "issue": "How much care did A owe, and who bears the loss?",
+    "factors": [
+      "harmOccurred",
+      "gratuitousService",
+      "respondentBenefited",
+      "deviationFromTerms",
+      "properPrecaution",
+      "wrongfulTaking",
+      "irresistibleForce",
+      "claimantConsented"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LH §§120-126"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 22:6-14"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BM 3:1, 7:8 (four bailees)"
+      },
+      {
+        "tradition": "roman",
+        "cite": "D.13.6 (commodatum); D.16.3 (depositum)"
+      }
+    ],
+    "notes": "The clearest independent convergence in the corpus: both the Mishnah and the Roman jurists grade the standard of care by who benefits, and neither can have borrowed it from the other."
+  },
+  {
+    "id": "FP-BUILD",
+    "name": "Defective work by a professional",
+    "scenario": "A builds, treats or carries for B, holding himself out as skilled.  The work fails and B or B's property is harmed.",
+    "issue": "Does professing skill raise the standard, and to what?",
+    "factors": [
+      "harmOccurred",
+      "professedSkill",
+      "respondentActedDirectly",
+      "respondentBenefited",
+      "harmToPerson",
+      "customaryPractice",
+      "claimantConsented"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LH §§215-240 (surgeon, builder, boatman)"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 9:3-4; t.BK 9"
+      },
+      {
+        "tradition": "roman",
+        "cite": "D.9.2.7.8; D.19.2.9.5; imperitia culpae adnumeratur"
+      }
+    ],
+    "notes": "The Roman maxim *imperitia culpae adnumeratur* -- lack of skill counts as fault -- and LH §229's capital sanction for the builder are the same rule with incomparable remedies."
+  },
+  {
+    "id": "FP-ASSAULT",
+    "name": "Bodily injury between persons",
+    "scenario": "A strikes or wounds B.",
+    "issue": "Is the response retaliation, a tariff, or compensation, and does the status of the parties change it?",
+    "factors": [
+      "harmOccurred",
+      "harmToPerson",
+      "respondentActedDirectly",
+      "intentToHarm",
+      "defensive",
+      "claimantAtFault"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LH §§196-214"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 21:18-27"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 8:1 (five heads of damage)"
+      },
+      {
+        "tradition": "roman",
+        "cite": "XII Tab. 8.2-8.4; D.47.10 (iniuria)"
+      },
+      {
+        "tradition": "chinese",
+        "cite": "唐律疏議 鬥訟 (Affrays and Suits), arts. 302-346"
+      },
+      {
+        "tradition": "english",
+        "cite": "Æthelberht (c. 600), the bót tariffs"
+      }
+    ],
+    "notes": "The one pattern where the traditions differ on the *form* of the remedy as sharply as on its size: talion, tariff and assessment all appear, and m.BK 8:1's five separate heads (damage, pain, healing, lost time, indignity) are a fourth form again."
+  },
+  {
+    "id": "FP-CONSENT",
+    "name": "Leave and its withdrawal",
+    "scenario": "A does to B's thing or person what would otherwise be a wrong, but B had given leave -- or the leave was exceeded.",
+    "issue": "What does consent do, and when does exceeding it restore liability?",
+    "factors": [
+      "claimantConsented",
+      "deviationFromTerms",
+      "harmOccurred",
+      "respondentBenefited",
+      "noticeGiven"
+    ],
+    "witnesses": [
+      {
+        "tradition": "mesopotamian",
+        "cite": "LH §57 (without the owner's consent)"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 22:14 (the owner being with it)"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BM 6:1-2 (deviation by a hirer)"
+      },
+      {
+        "tradition": "roman",
+        "cite": "D.47.2.77 (furtum usus); volenti non fit iniuria"
+      }
+    ],
+    "notes": "This is the pattern that carries the project's central claim: consent is a liability-waiver, and a right is the shape the waiver leaves behind.  See Nomos/Core/Right.lean."
+  },
+  {
+    "id": "FP-WRONGFUL-DAMAGE",
+    "name": "The general standard of wrongful damage",
+    "scenario": "A damages B's property or person by his own act, in no special relationship and under no special rule.",
+    "issue": "How much fault must be shown, and what excuses -- incapacity, the claimant's own conduct, self-defence?",
+    "factors": [
+      "harmOccurred",
+      "respondentActedDirectly",
+      "intentToHarm",
+      "noPrecaution",
+      "claimantAtFault",
+      "defensive",
+      "behavedAnomalously",
+      "irresistibleForce"
+    ],
+    "witnesses": [
+      {
+        "tradition": "roman",
+        "cite": "lex Aquilia; D.9.2 passim"
+      },
+      {
+        "tradition": "rabbinic",
+        "cite": "m.BK 1:1 (general rule); m.BK 2:6"
+      },
+      {
+        "tradition": "covenant",
+        "cite": "Ex 21:18-19, 22:5"
+      },
+      {
+        "tradition": "chinese",
+        "cite": "唐律疏議 art. 203; 大清律例 44.00 (斷罪無正條)"
+      },
+      {
+        "tradition": "english",
+        "cite": "Rylands v Fletcher (1868); Magna Carta cl. 20, 39"
+      }
+    ],
+    "notes": "The two traditions state the standard at opposite ends of the same scale and mean nearly the same thing: Ulpian's *in lege Aquilia et levissima culpa venit* (even the slightest fault counts, D.9.2.44pr) and the Mishnah's *adam mu'ad le-olam* (a person is always forewarned, m.BK 2:6).  Both put the human actor at the top of the scale of responsibility and then spend their energy on the excuses."
+  }
+]

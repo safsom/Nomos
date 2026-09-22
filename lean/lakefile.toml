@@ -1,0 +1,14 @@
+name = "nomos"
+version = "0.1.0"
+defaultTargets = ["Nomos", "export-corpus"]
+
+# Deliberately dependency-free.  The library uses only Lean 4 core, so
+# `lake build` takes seconds and needs no Mathlib cache.  Nothing here needs
+# real analysis; it needs decidable finite combinatorics over factor sets.
+
+[[lean_lib]]
+name = "Nomos"
+
+[[lean_exe]]
+name = "export-corpus"
+root = "Nomos.Export"

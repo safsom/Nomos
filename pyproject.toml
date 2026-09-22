@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nomos"
+version = "0.1.0"
+description = "Rights and liabilities formalised across legal traditions, with precedent-guided autoformalisation"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []          # the core library is stdlib-only by design
+
+[project.optional-dependencies]
+notebooks = ["jupyter", "nbformat", "nbconvert", "ipykernel"]
+llm = ["anthropic", "openai"]
+train = ["torch", "transformers>=4.44", "peft>=0.12", "trl>=0.9",
+         "datasets>=2.20", "accelerate>=0.33", "bitsandbytes>=0.43"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
